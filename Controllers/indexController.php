@@ -19,3 +19,8 @@ $twentyClients = $clientManager->get20Clients();
 foreach ($twentyClients as $unClient) {
     echo "Nom & Prénom du client : " . $unClient->getLastName() . " " . $unClient->getFirstName() . $br;
 }
+// Exercice 5
+$findClients = $clientManager->getClientByName("M");
+foreach ($findClients as $unClient) {
+    echo "Nom & Prénom du client : " . $unClient->getLastName() . " " . $unClient->getFirstName() . $br;
+}
