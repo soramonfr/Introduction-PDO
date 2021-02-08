@@ -16,13 +16,32 @@ class ClientManager
 
     public function getAllClients() {
         $reponse = $this->db->query("SELECT * FROM clients");
+        // Renvoie un tableau de résultats
         $clients =  $reponse->fetchAll(PDO::FETCH_ASSOC);
+        
         $listeClients = [];
         foreach ($clients as $client) {
             array_push($listeClients, new Clients($client));
         }
         return $listeClients;
     }
+
+    public function get20Clients() {
+        $reponse = $this->db->query("SELECT * FROM clients LIMIT 20");
+        // Renvoie un tableau de résultats
+        $clients =  $reponse->fetchAll(PDO::FETCH_ASSOC);
+        
+        $listeClients = [];
+        foreach ($clients as $client) {
+            array_push($listeClients, new Clients($client));
+        }
+        return $listeClients;
+        
+    }
+    // Autre alternative, sans limite. Mais qui aurait lancé une erreur si moins de 20 entrées dans le tableau.
+    // for ($i = 0; $i < 20 ; $i++) {
+    //     array_push($listeClients, new Clients($clients[$i]));
+    // }
 }
 
 ?>
