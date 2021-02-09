@@ -14,7 +14,7 @@ class ShowManager
     }
 
     public function getAllShows() {
-        $reponse = $this->db->query("SELECT * FROM shows");
+        $reponse = $this->db->query("SELECT * FROM shows ORDER BY `title` ASC");
         return $this->fetchAllCC($reponse);
     }
 
