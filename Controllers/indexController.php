@@ -43,5 +43,5 @@ var_dump($allShows);
 $showTypes = $showManager->getShowTypes();
 echo "Les types de spectacles possibles sont : " . $br;
 foreach ($showTypes as $showType) {
-        echo "* " . $showType['type'] . $br;
-    }
+    echo "* " . $showType['type'] . $br;
+}
