@@ -24,6 +24,13 @@ $findClients = $clientManager->getClientByName("M");
 foreach ($findClients as $unClient) {
     echo "Nom & Prénom du client : " . $unClient->getLastName() . " " . $unClient->getFirstName() . $br;
 }
+
 // Exercice bonus
 // $findCC = $clientManager->get1Client();
 // var_dump($findCC);
+
+// Exercice 4
+$findLoyalClients = $clientManager->getLoyaltyCard();
+foreach ($findLoyalClients as $unClient) {
+    echo "Nom & Prénom du client : " . $unClient['lastName'] . " " . $unClient['firstName'] . $br;
+}

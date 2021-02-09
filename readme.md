@@ -2,7 +2,7 @@
 
 **Exécuter le script colyseum.sql avant de commencer. Tous les résultats devront être affichés dans une page index.php.**
 
-## Exercice 1
+## Exercice 1 - OK
 
 Afficher tous les clients.
 
@@ -10,7 +10,7 @@ Afficher tous les clients.
 
 Afficher tous les types de spectacles possibles.
 
-## Exercice 3
+## Exercice 3 - OK
 
 Afficher les 20 premiers clients.
 
@@ -18,7 +18,7 @@ Afficher les 20 premiers clients.
 
 N'afficher que les clients possédant une carte de fidélité.
 
-## Exercice 5
+## Exercice 5 - OK
 
 Afficher uniquement le nom et le prénom de tous les clients dont le nom commence par la lettre "M".
 Les afficher comme ceci :

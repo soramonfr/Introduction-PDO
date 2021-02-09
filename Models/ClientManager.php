@@ -47,6 +47,9 @@ class ClientManager
         $client =  $reponse->fetch();
         return new Clients($client);
     }
-}
 
-?>
+    public function getLoyaltyCard() {
+        $reponse = $this->db->query("SELECT clients.`lastName`, clients.`firstName` FROM clients INNER JOIN cards ON clients.`cardNumber` = cards.`cardNumber` INNER JOIN `cardTypes` on cards.`cardTypesID` = `cardTypes`.id WHERE type = 'Fidélité'");
+        return $reponse->fetchAll();
+    }
+}
