@@ -37,11 +37,15 @@ $clientManager = new ClientManager($database);
 
 
 $showManager = new ShowManager($database);
-// Exercice 2 affichage de toutes les données et puis filtre sur le genre de spectacles
+// Exercice 2 : filtre sur le genre de spectacles
+// $showTypes = $showManager->getShowTypes();
+// echo "Les types de spectacles possibles sont : " . $br;
+// foreach ($showTypes as $showType) {
+//     echo "* " . $showType['type'] . $br;
+// }
+
+// Exercice 6
 $allShows = $showManager->getAllShows();
-var_dump($allShows);
-$showTypes = $showManager->getShowTypes();
-echo "Les types de spectacles possibles sont : " . $br;
-foreach ($showTypes as $showType) {
-    echo "* " . $showType['type'] . $br;
-}
+foreach ($allShows as $show) {
+        echo "🎞 A l'affiche : " . $show->getTitle() . " interprété par " . $show->getPerformer() . " le " . $show->getDate() . " à " . $show->getStartTime() . $br;
+    }

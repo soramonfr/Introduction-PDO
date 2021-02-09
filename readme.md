@@ -6,7 +6,7 @@
 
 Afficher tous les clients.
 
-## Exercice 2
+## Exercice 2 - OK
 
 Afficher tous les types de spectacles possibles.
 
@@ -29,7 +29,7 @@ Les afficher comme ceci :
 
 Trier les noms par ordre alphabétique.
 
-## Exercice 6
+## Exercice 6 - OK
 
 Afficher le titre de tous les spectacles ainsi que l'artiste, la date et l'heure. Trier les titres par ordre alphabétique. Afficher les résultat comme ceci : *Spectacle* par *artiste*, le *date* à *heure*.
 
