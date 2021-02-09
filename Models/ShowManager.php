@@ -13,4 +13,17 @@ class ShowManager
         $this->db = $database->getDb();
     }
 
+    public function getAllShows() {
+        $reponse = $this->db->query("SELECT * FROM shows");
+        return $this->fetchAllCC($reponse);
+    }
+
+    private function fetchAllCC($reponse) {
+        $shows =  $reponse->fetchAll(PDO::FETCH_ASSOC);        
+        $listeShows = [];
+        foreach ($shows as $show) {
+            array_push($listeShows, new Shows($show));
+        }
+        return $listeShows;
+    }
 }

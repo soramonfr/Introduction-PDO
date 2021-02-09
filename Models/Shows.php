@@ -21,7 +21,7 @@ class Shows
         $this->setDate($show['date']);
         $this->setShowTypesId($show['showTypesId']);
         $this->setFirstGenresId($show['firstGenresId']);
-        $this->setSecondGenreId($show['secondGenresId']);
+        $this->setSecondGenreId($show['secondGenreId']);
         $this->setDuration($show['duration']);
         $this->setStartTime($show['startTime']);
     }
