@@ -14,7 +14,7 @@ Afficher tous les types de spectacles possibles.
 
 Afficher les 20 premiers clients.
 
-## Exercice 4
+## Exercice 4 - OK
 
 N'afficher que les clients possédant une carte de fidélité.
 
