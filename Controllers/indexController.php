@@ -35,7 +35,13 @@ $clientManager = new ClientManager($database);
 //     echo "Nom & Prénom du client : " . $unClient['lastName'] . " " . $unClient['firstName'] . $br;
 // }
 
-// Exercice 2
+
 $showManager = new ShowManager($database);
+// Exercice 2 affichage de toutes les données et puis filtre sur le genre de spectacles
 $allShows = $showManager->getAllShows();
 var_dump($allShows);
+$showTypes = $showManager->getShowTypes();
+echo "Les types de spectacles possibles sont : " . $br;
+foreach ($showTypes as $showType) {
+        echo "* " . $showType['type'] . $br;
+    }

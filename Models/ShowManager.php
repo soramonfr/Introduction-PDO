@@ -18,6 +18,11 @@ class ShowManager
         return $this->fetchAllCC($reponse);
     }
 
+    public function getShowTypes() {
+        $reponse = $this->db->query("SELECT type FROM `showTypes`");
+        return $reponse->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     private function fetchAllCC($reponse) {
         $shows =  $reponse->fetchAll(PDO::FETCH_ASSOC);        
         $listeShows = [];
