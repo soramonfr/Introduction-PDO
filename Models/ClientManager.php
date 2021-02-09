@@ -41,6 +41,12 @@ class ClientManager
         }
         return $listeClients;
     }
+
+    public function get1Client() {
+        $reponse = $this->db->query("SELECT * FROM clients LIMIT 1");
+        $client =  $reponse->fetch();
+        return new Clients($client);
+    }
 }
 
 ?>
